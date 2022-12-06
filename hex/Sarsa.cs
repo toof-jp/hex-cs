@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace hex
+
 {
     class Sarsa
     {
@@ -75,7 +76,8 @@ namespace hex
 
                         if (i % WIN_RATES_INTERVAL == WIN_RATES_INTERVAL - 1)
                         {
-                            winRates[i / WIN_RATES_INTERVAL] = (double)win / (i + 1);
+                            winRates[i / WIN_RATES_INTERVAL] = (double)win / WIN_RATES_INTERVAL;
+                            win = 0;
                         }
 
 
